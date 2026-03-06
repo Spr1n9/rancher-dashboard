@@ -4,6 +4,10 @@ import { FetchHttpHandler } from '@smithy/fetch-http-handler';
 import { isArray, addObjects } from '@shell/utils/array';
 import { formatAWSError } from '@shell/utils/error';
 
+function isChinaRegion(region) {
+  return !!region?.startsWith('cn-');
+}
+
 export const state = () => {
   return {
     instanceTypes: [],
@@ -115,7 +119,7 @@ export const actions = {
       region,
       credentialDefaultProvider: credentialDefaultProvider(accessKey, secretKey),
       requestHandler:            new Handler(cloudCredentialId),
-      useDualstackEndpoint:      true,
+      useDualstackEndpoint:      !isChinaRegion(region),
     });
 
     return client;
@@ -130,7 +134,7 @@ export const actions = {
       region,
       credentialDefaultProvider: credentialDefaultProvider(accessKey, secretKey),
       requestHandler:            new Handler(cloudCredentialId),
-      useDualstackEndpoint:      true,
+      useDualstackEndpoint:      !isChinaRegion(region),
     });
 
     return client;
@@ -145,7 +149,7 @@ export const actions = {
       region,
       credentialDefaultProvider: credentialDefaultProvider(accessKey, secretKey),
       requestHandler:            new Handler(cloudCredentialId),
-      useDualstackEndpoint:      true,
+      useDualstackEndpoint:      !isChinaRegion(region),
     });
 
     return client;
@@ -160,7 +164,7 @@ export const actions = {
       region,
       credentialDefaultProvider: credentialDefaultProvider(accessKey, secretKey),
       requestHandler:            new Handler(cloudCredentialId),
-      useDualstackEndpoint:      true,
+      useDualstackEndpoint:      !isChinaRegion(region),
     });
 
     return client;
