@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git log:*)",
+      "Bash(git checkout:*)",
+      "Bash(npm run dev:*)",
+      "Bash(node:*)",
+      "Bash(git add:*)",
+      "Bash(npm:*)",
+      "Bash(yarn:*)",
+      "Bash(where yarn)",
+      "Bash(npx yarn --version)",
+      "Bash(npx yarn install)",
+      "Bash(npx yarn install:*)",
+      "Bash(where:*)",
+      "Bash(curl:*)",
+      "Bash(cmd.exe /c \"where nvm.exe\")",
+      "Bash(cmd.exe /c \"echo %NVM_HOME%\")",
+      "Bash(powershell -Command \"Get-Command nvm -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source\")",
+      "Bash(cmd.exe /c \"nvm version\")",
+      "Bash(cmd.exe /c \"nvm list\")",
+      "Bash(\"/c/Users/pengcheng_liao/AppData/Local/nvm/nvm.exe\" list)",
+      "Bash(./nvm.exe list:*)",
+      "Bash(powershell -Command \"Set-Location ''C:\\\\Users\\\\pengcheng_liao\\\\AppData\\\\Local\\\\nvm''; & ''.\\\\nvm.exe'' list available\")",
+      "Bash(npx yarn build:*)"
+    ]
+  }
+}
