@@ -123,3 +123,5 @@ docusaurus/yarn.lock
 
 # GitHub actions scripts output
 codecov
+PR-DESCRIPTION.md
+.claude/settings.local.json
